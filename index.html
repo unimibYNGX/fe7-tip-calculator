@@ -18,28 +18,43 @@
     <div class="header bill">Bill</div>
     <div class="display"><img src="images/icon-dollar.svg" class="img-dollar" alt="">
       <div class="col2">
-        <input type="number" id="npeople" name="npeople" class="input-col2">
+        <input type="number" id="bill" value="" class="input-col2" onkeyup="calculateTip()">
       </div>
     </div>
     <div class="header">Select Tip %</div>
-    <div class="flex-grid">
+    <div class="flex-grid noselect">
       <div class="row r1">
-        <div class="btn-tip btn-left">5%</div>
-        <div class="btn-tip btn-right">10%</div>
+        <label>
+          <input type="radio" name="n" value="5" onclick="calculateTip()"><div class="btn-tip btn-left">5%</div>
+        </label>
+        <label>
+          <input type="radio" name="n" value="10" onclick="calculateTip()"><div class="btn-tip btn-left">10%</div>
+        </label>
       </div>
       <div class="row r2">
-        <div class="btn-tip btn-left">15% </div>
-        <div class="btn-tip btn-right">25%</div>
+        <label>
+          <input type="radio" name="n" value="15" onclick="calculateTip()"><div class="btn-tip btn-left">15%</div>
+        </label>
+        <label>
+          <input type="radio" name="n" value="25" onclick="calculateTip()"><div class="btn-tip btn-left">25%</div>
+        </label>
       </div>
       <div class="row r3">
-        <div class="btn-tip btn-left">50%</div>
-        <div class="btn-tip btn-right btn-custom">Custom</div>
+        <label>
+          <input type="radio" name="n" value="50" onclick="calculateTip()"><div class="btn-tip btn-left">50%</div>
+        </label>
+        <label>
+          <input type="radio" name="n" value="custom" onclick="calculateTip()"><div class="btn-tip btn-left">custom</div>
+        </label>
       </div>
     </div>
     <div class="header">Number of People</div>
     <div class="display"><img src="images/icon-person.svg" alt="" class="img-person">
       <div class="col2">
-        <input type="number" id="npeople" name="npeople" class="input-col2">
+        <input type="number"  
+        oninput="this.value = Math.round(this.value);" 
+        id="people" name="npeople" class="input-col2" 
+        onkeyup="calculateTip()">
       </div>
     </div>
     <div class="card2">
@@ -48,14 +63,14 @@
             <div class="more">Tip Amount</div>
             <div class="less">/ person</div>
           </div>
-          <div class="col2">placeholder</div>
+          <div class="col2"><div class="txt-result1" id="txt-result1"></div></div>
         </div>
         <div class="row2 r2">
           <div class="col1">
             <div class="more">Total</div>
             <div class="less">/ person</div>
           </div>
-          <div class="col2">placeholder</div>
+          <div class="col2"><div class="txt-result2" id="txt-result2"></div></div>
         </div>
       <div class="btn-reset">RESET</div>
     </div>
@@ -65,5 +80,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <!--scripts-->
+  <script src="index.js"></script>
 </body>
 </html>

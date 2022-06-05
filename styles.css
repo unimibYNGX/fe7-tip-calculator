@@ -94,12 +94,13 @@ body {
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .btn-tip {
-    width: 50%;
+    width: 100%;
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
     padding-top: 9px;
     padding-bottom: 9px;
     border-radius: 5px;
@@ -110,24 +111,21 @@ body {
     transition: 0.25s ease;
 }
 
+
+
 .btn-left {
-    margin: 10px;
+    /* margin: 10px; */
     margin-left: 0px;
 }
 
 .btn-right {
-    margin: 10px;
+    /* margin: 10px; */
     margin-right: 0px;
 }
 
 .btn-custom {
     background-color: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%)
-}
-
-.btn-tip:hover {
-    background-color: var(--strong_cyan);
-    color: var(--very_dark_cyan);
 }
 
 .card2 {
@@ -196,3 +194,34 @@ input[type=number] {
     padding-right: 10px;
     margin-bottom: 5px;
 }
+
+input[type=radio] {
+    opacity: 0;
+    width: 100%;
+    height: 0px;
+}
+
+
+input[type=radio]:checked + div {
+    background-color: var(--strong_cyan);
+    color: var(--very_dark_cyan);
+}
+
+.btn-tip:hover{
+    background-color: var(--strong_cyan);
+    color: var(--very_dark_cyan);
+}
+
+label {
+    width: 47%;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
