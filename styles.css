@@ -127,10 +127,6 @@ body {
     transition: 0.25s ease;
 }
 
-.btn-reset {
-
-}
-
 .btn-left {
     /* margin: 10px; */
     margin-left: 0px;
@@ -143,7 +139,23 @@ body {
 
 .btn-custom {
     background-color: hsl(189, 41%, 97%);
-    color: hsl(184, 14%, 56%)
+    color: hsl(184, 14%, 56%);
+
+    width: 100%;
+    text-align: center;
+    /* padding: 20px; */
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: hsl(183, 100%, 15%);
+    color: var(--light_grayish_cyan);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.input-custom {
+    width: 80%;
 }
 
 .card2 {
