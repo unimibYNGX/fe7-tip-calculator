@@ -87,4 +87,16 @@ function zeroPeople() {
     }
 }
 
+function reset() {
+    var bill = document.getElementById("bill");
+    var people = document.getElementById("people");
+
+    bill.value = ''; people.value = '';
+    var radios = document.getElementsByName("n");
+    for (let index = 0; index < radios.length; index++) {
+        radios[index].checked = false;
+    }
+    document.getElementById("txt-result1").innerHTML = "";
+    document.getElementById("txt-result2").innerHTML = "";
+}
 

@@ -127,7 +127,9 @@ body {
     transition: 0.25s ease;
 }
 
+.btn-reset {
 
+}
 
 .btn-left {
     /* margin: 10px; */
@@ -176,6 +178,11 @@ body {
     transition: 0.25s ease;
 }
 
+.btn-reset:hover {
+    background-color: hsl(172, 67%, 77%);
+    color: hsl(184, 83%, 12%);
+}
+
 .row2 {
     width: 100%;
     padding: 5px;
@@ -206,6 +213,18 @@ body {
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 10px;
+}
+
+.col4 {
+    width: 100%;
+    vertical-align: middle;
+    text-align: end;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.input-col2 {
+    cursor: pointer;
 }
 
 .zero-error {

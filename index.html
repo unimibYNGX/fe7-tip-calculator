@@ -17,7 +17,7 @@
   <div class="card">
     <div class="header bill">Bill</div>
     <div class="display"><img src="images/icon-dollar.svg" class="img-dollar" alt="">
-      <div class="col2">
+      <div class="col4">
         <input type="number" id="bill" value="" class="input-col2" onkeyup="calculateTip()">
       </div>
     </div>
@@ -54,7 +54,7 @@
       <div class="header3 zero-error hide" id="zero-error">Can't be zero</div>
     </div>
     <div class="display display-people" id="display-people"><img src="images/icon-person.svg" alt="" class="img-person">
-      <div class="col2">
+      <div class="col4">
         <input type="number"  
         oninput="this.value = Math.round(this.value);" 
         id="people" name="npeople" class="input-col2" 
@@ -76,7 +76,7 @@
           </div>
           <div class="col2"><div class="txt-result2" id="txt-result2"></div></div>
         </div>
-      <div class="btn-reset">RESET</div>
+      <div class="btn-reset" onclick="reset()">RESET</div>
     </div>
   </div>
   
