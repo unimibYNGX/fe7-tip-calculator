@@ -7,6 +7,7 @@ function calculateTip() {
 
     var tip = parseInt(document.querySelector('input[name="n"]:checked').value);
     var people = parseInt(readPeople());
+
     var result = bill / people / 100 * tip;
     // console.log("result: " + result);
     var totalEach = bill / people + result;
@@ -14,7 +15,7 @@ function calculateTip() {
     var roundedResult = Math.round(100*result)/100;
     var roundedTotalEach = Math.round(100*totalEach)/100;
 
-    if(Number.isNaN(result)){
+    if(!Number.isFinite(result)){
         document.getElementById("txt-result1").innerHTML = "";
         document.getElementById("txt-result2").innerHTML = "";
     }
@@ -45,6 +46,7 @@ function readPeople() {
     //     console.log("people: " + people_content);
     // else 
     //     console.log("people: empty");
+
     return people.value;
 }
 
@@ -56,6 +58,33 @@ function readTip() {
     //     console.log("tip: empty");
     // }
     return tip;
+}
+
+function zeroPeople() {
+    var people = parseInt(readPeople());
+    var text = document.getElementById("zero-error");
+    var element = document.getElementById("display-people");
+    if(people == 0) {
+        console.log("reading zero people");
+        if(!element.classList.contains("border-red"))
+            element.classList.add("border-red");
+
+        if(text.classList.contains("hide"))
+        {
+            text.classList.remove("hide");
+            text.classList.add("show");
+        }
+    }
+    else {
+        console.log("reading more than zero people");
+        if(element.classList.contains("border-red"))
+            element.classList.remove("border-red"); 
+
+        if(text.classList.contains("show")){
+            text.classList.remove("show");
+            text.classList.add("hide");
+        }
+    }
 }
 
 

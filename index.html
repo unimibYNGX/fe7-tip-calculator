@@ -21,11 +21,12 @@
         <input type="number" id="bill" value="" class="input-col2" onkeyup="calculateTip()">
       </div>
     </div>
-    <div class="header">Select Tip %</div>
+    <div class="header2">Select Tip %</div>
     <div class="flex-grid noselect">
       <div class="row r1">
         <label>
-          <input type="radio" name="n" value="5" onclick="calculateTip()"><div class="btn-tip btn-left">5%</div>
+          <input type="radio" name="n" value="5" onclick="calculateTip()">
+          <div class="btn-tip btn-left">5%</div>
         </label>
         <label>
           <input type="radio" name="n" value="10" onclick="calculateTip()"><div class="btn-tip btn-left">10%</div>
@@ -48,13 +49,16 @@
         </label>
       </div>
     </div>
-    <div class="header">Number of People</div>
-    <div class="display"><img src="images/icon-person.svg" alt="" class="img-person">
+    <div class="col3">
+      <div class="header3">Number of People</div>
+      <div class="header3 zero-error hide" id="zero-error">Can't be zero</div>
+    </div>
+    <div class="display display-people" id="display-people"><img src="images/icon-person.svg" alt="" class="img-person">
       <div class="col2">
         <input type="number"  
         oninput="this.value = Math.round(this.value);" 
         id="people" name="npeople" class="input-col2" 
-        onkeyup="calculateTip()">
+        onkeyup="calculateTip(); zeroPeople()">
       </div>
     </div>
     <div class="card2">
