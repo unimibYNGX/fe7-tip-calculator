@@ -35,6 +35,9 @@
 
 .input-col2 {
     width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .logo {
@@ -44,12 +47,12 @@
 
 .img-person {
     height: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .img-dollar {
     height: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
 }   
 
 .img-logo {
@@ -75,13 +78,16 @@ body {
     justify-content: space-between;
     background-color: var(--very_light_grayish_cyan);
     width: 100%;
-    padding: 10px;
+
+    /* padding: 10px; */
     padding-left: 20px;
     padding-right: 20px;
+
     font-size: 25px;
     color: var(--light_grayish_cyan);
     border-radius: 10px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .header {
@@ -114,17 +120,19 @@ body {
 }
 
 .btn-tip {
+    height: 50px;
     width: 100%;
     text-align: center;
-    /* padding: 20px; */
-    padding-top: 9px;
-    padding-bottom: 9px;
+    /* padding-top: 9px;
+    padding-bottom: 9px; */
     border-radius: 5px;
     font-size: 25px;
     background-color: hsl(183, 100%, 15%);
     color: var(--light_grayish_cyan);
     cursor: pointer;
     transition: 0.25s ease;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-left {
@@ -138,24 +146,36 @@ body {
 }
 
 .btn-custom {
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(184, 14%, 56%);
+    color: hsl(186, 18%, 54%);
 
+    height: 50px;
     width: 100%;
     text-align: center;
-    /* padding: 20px; */
-    padding-top: 9px;
-    padding-bottom: 9px;
+
+    /* padding-top: 9px;
+    padding-bottom: 9px; */
+
     border-radius: 5px;
     font-size: 25px;
-    background-color: hsl(183, 100%, 15%);
-    color: var(--light_grayish_cyan);
+    background-color: hsl(189, 41%, 97%);
     cursor: pointer;
     transition: 0.25s ease;
+
+    display: flex;
+    justify-content: center;
+}
+
+.ntext {
+    margin-top: 5px;
 }
 
 .input-custom {
-    width: 80%;
+    width: 95%;
+    margin-top: 5px;
+    height: 40px;
+    line-height: 50px;
+    background-color: hsl(183, 100%, 15%);
+    cursor: pointer;
 }
 
 .card2 {
@@ -237,6 +257,9 @@ body {
 
 .input-col2 {
     cursor: pointer;
+    line-height: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .zero-error {
@@ -244,7 +267,7 @@ body {
 }
 
 input[type=number] {
-    /* padding: 10px; */
+    padding: 0px;
     text-align: end;
     border: none;
     background-color: hsl(189, 41%, 97%);
@@ -252,20 +275,35 @@ input[type=number] {
     font-size: 20px;
     color:hsl(183, 100%, 15%);
     font-weight: 800;
-    padding-right: 10px;
-    margin-bottom: 5px;
+    /* padding-right: 10px; */
 }
 
 input[type=radio] {
     opacity: 0;
     width: 100%;
     height: 0px;
-}
 
+    /* opacity: 100;
+    width: 100%;
+    height: 10px; */
+}
 
 input[type=radio]:checked + div {
     background-color: var(--strong_cyan);
     color: var(--very_dark_cyan);
+}
+
+.custom-input {
+    background-color: hsl(189, 41%, 97%);
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    height: 50px;
+    line-height: 40px; 
+}
+
+.border-green {
+    /* border: solid red;*/
+    box-shadow: inset 0 0 0 2.5px hsl(172, 67%, 45%);
 }
 
 .btn-tip:hover{
@@ -298,4 +336,11 @@ label {
 
 .hide {
     display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
 }

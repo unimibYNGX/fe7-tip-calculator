@@ -16,7 +16,8 @@
   </div>
   <div class="card">
     <div class="header bill">Bill</div>
-    <div class="display"><img src="images/icon-dollar.svg" class="img-dollar" alt="">
+    <div class="display" id="display-bill">
+      <img src="images/icon-dollar.svg" class="img-dollar" alt="">
       <div class="col4">
         <input type="number" id="bill" value="" class="input-col2" onkeyup="calculateTip()">
       </div>
@@ -26,29 +27,34 @@
       <div class="row r1">
         <label>
           <input type="radio" name="n" value="5" onclick="calculateTip()">
-          <div class="btn-tip btn-left">5%</div>
+          <div class="btn-tip btn-left"><div class="ntext">5%</div></div>
         </label>
         <label>
-          <input type="radio" name="n" value="10" onclick="calculateTip()"><div class="btn-tip btn-left">10%</div>
+          <input type="radio" name="n" value="10" onclick="calculateTip()"><div class="btn-tip btn-left"><div class="ntext">10%</div></div>
         </label>
       </div>
       <div class="row r2">
         <label>
-          <input type="radio" name="n" value="15" onclick="calculateTip()"><div class="btn-tip btn-left">15%</div>
+          <input type="radio" name="n" value="15" onclick="calculateTip()"><div class="btn-tip btn-left"><div class="ntext">15%</div></div>
         </label>
         <label>
-          <input type="radio" name="n" value="25" onclick="calculateTip()"><div class="btn-tip btn-left">25%</div>
+          <input type="radio" name="n" value="25" onclick="calculateTip()"><div class="btn-tip btn-left"><div class="ntext">25%</div></div>
         </label>
       </div>
       <div class="row r3">
         <label>
-          <input type="radio" name="n" value="50" onclick="calculateTip()"><div class="btn-tip btn-left">50%</div>
+          <input type="radio" name="n" value="50" onclick="calculateTip()"><div class="btn-tip btn-left"><div class="ntext">50%</div></div>
         </label>
         <label>
           <input type="radio" name="n" value="custom" onclick="calculateTip()">
-          <div class="btn-left btn-custom">
-            <input type="number" name="n" value="custom" class="input-custom">
+
+          <div class="btn-left btn-custom custom-button" id="custom-button" onclick="showCustom()">
+            <div class="ntext">Custom</div>
           </div>
+          <div class="btn-left btn-custom custom-input hide" id="custom-input">
+            <input type="number" name="n" value="" class="input-custom" id="input-custom" onkeyup="calculateTip()">
+          </div>
+
         </label>
       </div>
     </div>
