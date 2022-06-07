@@ -20,154 +20,180 @@
             <img src="images/logo.svg" alt="" class="img-logo" />
         </div>
         <div class="card">
-            <div class="header bill">Bill</div>
-            <div class="display" id="display-bill">
-                <img src="images/icon-dollar.svg" class="img-dollar" alt="" />
-                <div class="col4">
-                    <input
-                        type="number"
-                        id="bill"
-                        value=""
-                        class="input-col2"
-                        onkeyup="calculateTip()"
-                    />
+            <div class="card-col1">
+                <div class="header bill">Bill</div>
+                <div class="display" id="display-bill">
+                    <img src="images/icon-dollar.svg" class="img-dollar" alt="" />
+                    <div class="col4">
+                        <input
+                            type="number"
+                            id="bill"
+                            value=""
+                            class="input-col2"
+                            onkeyup="calculateTip()"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="header2">Select Tip %</div>
-            <div class="flex-grid noselect">
-                <div class="row r1">
-                    <label>
-                        <input
-                            type="radio"
-                            name="n"
-                            value="5"
-                            onclick="calculateTip()"
-                        />
-                        <div class="btn-tip btn-left">
-                            <div class="ntext">5%</div>
-                        </div>
-                    </label>
-                    <label>
-                        <input
-                            type="radio"
-                            name="n"
-                            value="10"
-                            onclick="calculateTip()"
-                        />
-                        <div class="btn-tip btn-left">
-                            <div class="ntext">10%</div>
-                        </div>
-                    </label>
-                </div>
-                <div class="row r2">
-                    <label>
-                        <input
-                            type="radio"
-                            name="n"
-                            value="15"
-                            onclick="calculateTip()"
-                        />
-                        <div class="btn-tip btn-left">
-                            <div class="ntext">15%</div>
-                        </div>
-                    </label>
-                    <label>
-                        <input
-                            type="radio"
-                            name="n"
-                            value="25"
-                            onclick="calculateTip()"
-                        />
-                        <div class="btn-tip btn-left">
-                            <div class="ntext">25%</div>
-                        </div>
-                    </label>
-                </div>
-                <div class="row r3">
-                    <label>
-                        <input
-                            type="radio"
-                            name="n"
-                            value="50"
-                            onclick="calculateTip()"
-                        />
-                        <div class="btn-tip btn-left">
-                            <div class="ntext">50%</div>
-                        </div>
-                    </label>
-                    <label>
-                        <input
-                            type="radio"
-                            name="n"
-                            value="custom"
-                            onclick="calculateTip()"
-                        />
-
-                        <div
-                            class="btn-left btn-custom custom-button"
-                            id="custom-button"
-                            onclick="showCustom()"
-                        >
-                            <div class="ntext">Custom</div>
-                        </div>
-                        <div
-                            class="btn-left btn-custom custom-input hide"
-                            id="custom-input"
-                        >
+                <div class="header2">Select Tip %</div>
+                <div class="flex-grid noselect">
+                    <div class="row r1">
+                        <label>
                             <input
-                                type="number"
+                                type="radio"
                                 name="n"
-                                value=""
-                                class="input-custom"
-                                id="input-custom"
-                                onkeyup="calculateTip()"
+                                value="5"
+                                onclick="calculateTip()"
                             />
+                            <div class="btn-tip btn-left">
+                                <div class="ntext">5%</div>
+                            </div>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="n"
+                                value="10"
+                                onclick="calculateTip()"
+                            />
+                            <div class="btn-tip btn-left">
+                                <div class="ntext">10%</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="row r2">
+                        <label>
+                            <input
+                                type="radio"
+                                name="n"
+                                value="15"
+                                onclick="calculateTip()"
+                            />
+                            <div class="btn-tip btn-left">
+                                <div class="ntext">15%</div>
+                            </div>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="n"
+                                value="25"
+                                onclick="calculateTip()"
+                            />
+                            <div class="btn-tip btn-left">
+                                <div class="ntext">25%</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="row r3">
+                        <label>
+                            <input
+                                type="radio"
+                                name="n"
+                                value="50"
+                                onclick="calculateTip()"
+                            />
+                            <div class="btn-tip btn-left">
+                                <div class="ntext">50%</div>
+                            </div>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="n"
+                                value="custom"
+                                onclick="calculateTip()"
+                            />
+                            <div
+                                class="btn-left btn-custom custom-button"
+                                id="custom-button"
+                                onclick="showCustom()"
+                            >
+                                <div class="ntext">Custom</div>
+                            </div>
+                            <div
+                                class="btn-left btn-custom custom-input hide"
+                                id="custom-input"
+                            >
+                                <input
+                                    type="number"
+                                    name="n"
+                                    value=""
+                                    class="input-custom"
+                                    id="input-custom"
+                                    onkeyup="calculateTip()"
+                                />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col3">
+                    <div class="header3">Number of People</div>
+                    <div class="header3 zero-error hide" id="zero-error">
+                        Can't be zero
+                    </div>
+                </div>
+                <div class="display display-people" id="display-people">
+                    <img src="images/icon-person.svg" alt="" class="img-person" />
+                    <div class="col4">
+                        <input
+                            type="number"
+                            oninput="this.value = Math.round(this.value);"
+                            id="people"
+                            name="npeople"
+                            class="input-col2"
+                            onkeyup="zeroPeople(); calculateTip();"
+                        />
+                    </div>
+                </div>
+                <div class="card2" id="card2">
+                    <div class="row2 r1">
+                        <div class="col1">
+                            <div class="more">Tip Amount</div>
+                            <div class="less">/ person</div>
                         </div>
-                    </label>
+                        <div class="col2">
+                            <div class="txt-result1" id="txt-result1"></div>
+                        </div>
+                    </div>
+                    <div class="row2 r2">
+                        <div class="col1">
+                            <div class="more">Total</div>
+                            <div class="less">/ person</div>
+                        </div>
+                        <div class="col2">
+                            <div class="txt-result2" id="txt-result2"></div>
+                        </div>
+                    </div>
+                    <div class="btn-reset inactive noHover" id="btn-reset" onclick="reset()">RESET</div>
                 </div>
             </div>
-            <div class="col3">
-                <div class="header3">Number of People</div>
-                <div class="header3 zero-error hide" id="zero-error">
-                    Can't be zero
-                </div>
-            </div>
-            <div class="display display-people" id="display-people">
-                <img src="images/icon-person.svg" alt="" class="img-person" />
-                <div class="col4">
-                    <input
-                        type="number"
-                        oninput="this.value = Math.round(this.value);"
-                        id="people"
-                        name="npeople"
-                        class="input-col2"
-                        onkeyup="zeroPeople(); calculateTip();"
-                    />
-                </div>
-            </div>
-            <div class="card2">
-                <div class="row2 r1">
-                    <div class="col1">
-                        <div class="more">Tip Amount</div>
-                        <div class="less">/ person</div>
+            <div class="card-col2">
+                <div class="card2 card3" id="card3">
+                    <div class="rows">
+                        <div class="row2 r1">
+                            <div class="col1">
+                                <div class="more">Tip Amount</div>
+                                <div class="less">/ person</div>
+                            </div>
+                            <div class="col2">
+                                <div class="txt-result1" id="txt-result1-d"></div>
+                            </div>
+                        </div>
+                        <div class="row2 r2">
+                            <div class="col1">
+                                <div class="more">Total</div>
+                                <div class="less">/ person</div>
+                            </div>
+                            <div class="col2">
+                                <div class="txt-result2" id="txt-result2-d"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col2">
-                        <div class="txt-result1" id="txt-result1"></div>
-                    </div>
+                    
+                    <div class="btn-reset inactive noHover" id="btn-reset-d" onclick="reset()">RESET</div>
                 </div>
-                <div class="row2 r2">
-                    <div class="col1">
-                        <div class="more">Total</div>
-                        <div class="less">/ person</div>
-                    </div>
-                    <div class="col2">
-                        <div class="txt-result2" id="txt-result2"></div>
-                    </div>
-                </div>
-                <div class="btn-reset inactive noHover" id="btn-reset" onclick="reset()">RESET</div>
             </div>
         </div>
-
         <div class="attribution">
             Challenge by
             <a
@@ -176,7 +202,6 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Your Name Here</a>.
         </div>
-
         <!--scripts-->
         <script src="index.js"></script>
     </body>

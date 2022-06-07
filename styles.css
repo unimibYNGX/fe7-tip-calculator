@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+.attribution {
+    display: none;
+}
+
+* {
+    font-family: 'Space Mono', sans-serif;
+    transition: 0.5s ease;
+}
+
 :root {
+    /* MOBILE */
     --strong_cyan: hsl(172, 67%, 45%);
 
     --very_dark_cyan: hsl(183, 100%, 15%);
@@ -11,29 +21,73 @@
     --white: hsl(0, 0%, 100%);
 
     --font_size: 24px;
+
+    --card-width: 100%;
+    --logo-width: 100%;
+    --card-bobolera: 0;
+    --card-boborira: 0;
+    --card-flex-wrap: wrap;
+    --card-col1-width: 80%;
+    --card-juco: center;
+    --body-bg: linear-gradient(
+        0deg,
+        var(--light_grayish_cyan) 50%,
+        var(--light_grayish_cyan)
+    );
+    --logo-pos: relative;
+    --logo-padding: 45px;
+    --card-top: auto;
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 1000px) {
+    /* DESKTOP */
+    * {
+        --card-width: 60%;
+        --logo-width: 100%;
+        --card-bobolera: 30px;
+        --card-boborira: 30px;
+        --card-flex-wrap: nowrap;
+        --card-col1-width: 47.5%;
+        --card-juco: space-between;
+        --body-bg: var(--light_grayish_cyan);
+        --logo-pos: absolute;
+        --logo-padding: 100px;
+        --card-top: 250px
+    }
 }
 
-.attribution {
-    display: none;
-}
-
-* {
-    font-family: 'Space Mono', sans-serif;
+.logo {
+    width: var(--logo-width);
+    padding: var(--logo-padding);
+    text-align: center;
+    position: var(--logo-pos);
 }
 
 .card {
-    justify-content: center;
+    width: var(--card-width);
+    justify-content: var(--card-juco);
     background-color: var(--white);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    border-bottom-left-radius: var(--card-bobolera);
+    border-bottom-right-radius: var(--card-boborira);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: var(--card-flex-wrap);
     padding: 30px;
     color: hsl(184, 14%, 56%);
     font-weight: 550;
+
+    top: var(--card-top);
+    height: fit-content;
+    position: relative;
+}
+
+.card-col1 {
+    width: var(--card-col1-width);
+}
+
+.card-col2 {
+    width: var(--card-col1-width);
 }
 
 .input-col2 {
@@ -41,11 +95,6 @@
     height: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-.logo {
-    width: fit-content;
-    padding: 45px;
 }
 
 .img-person {
@@ -63,7 +112,8 @@
 }
 
 body {
-    background-color: var(--light_grayish_cyan);
+    background: var(--body-bg);
+    background-repeat: no-repeat;
     display: flex;
     width: 100%;
     height: 100%;
@@ -80,9 +130,8 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: var(--very_light_grayish_cyan);
-    width: 100%;
+    /* width: 100%; */
 
-    /* padding: 10px; */
     padding-left: 20px;
     padding-right: 20px;
 
@@ -181,8 +230,17 @@ body {
     cursor: pointer;
 }
 
-.card2 {
+.txt-result1, .txt-result2{
+    font-size: 40px;
+    color: hsl(172, 67%, 45%);
+}
+
+.rows {
     width: 100%;
+}
+
+.card2 {
+    /* width: 100%; */
     background-color: var(--white);
     border-radius: 20px;
     display: flex;
@@ -193,13 +251,32 @@ body {
     background-color: var(--very_dark_cyan);
 }
 
+.card3 {
+    height: 93%;
+    padding-right: 25px;
+}
+
+.card3 .rows .row2 {
+    height: fit-content;
+    padding-bottom: 100px;
+}
+
+.card3 .row2.r1 {
+    padding-bottom: 0px;
+}
+
+.card3 .btn-reset {
+    margin-top: auto;
+    height: fit-content;
+}
+
 .row2 {
     display: flex;
     flex-wrap: wrap;
 }
 
 .btn-reset {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
     text-align: center;
     padding: 20px;
@@ -214,7 +291,7 @@ body {
 }
 
 .inactive {
-    background-color: rgb(0,108,110);
+    background-color: rgb(0, 108, 110);
     color: hsl(184, 83%, 12%);
 }
 
@@ -232,6 +309,7 @@ body {
     padding: 5px;
     /* background-color: red; */
     justify-content: space-between;
+    height: 60px;
 }
 
 .more {
@@ -244,8 +322,16 @@ body {
     color: hsl(184, 14%, 56%);
 }
 
+.col1 {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .col2 {
-    width: 50%;
+    width: 70%;
     vertical-align: middle;
     text-align: end;
     overflow: hidden;

@@ -25,12 +25,15 @@ function calculateTip() {
     var roundedTotalEach = Math.round(100 * totalEach) / 100
 
     if (!Number.isFinite(result)) {
-        document.getElementById('txt-result1').innerHTML = ''
-        document.getElementById('txt-result2').innerHTML = ''
+            document.getElementById('txt-result1').innerHTML = ''
+            document.getElementById('txt-result2').innerHTML = ''
+            document.getElementById('txt-result1-d').innerHTML = ''
+            document.getElementById('txt-result2-d').innerHTML = ''
     } else {
-        document.getElementById('txt-result1').innerHTML = '$' + roundedResult
-        document.getElementById('txt-result2').innerHTML =
-            '$' + roundedTotalEach
+            document.getElementById('txt-result1').innerHTML = '$' + roundedResult
+            document.getElementById('txt-result2').innerHTML = '$' + roundedTotalEach
+        document.getElementById('txt-result1-d').innerHTML = '$' + roundedResult
+        document.getElementById('txt-result2-d').innerHTML = '$' + roundedTotalEach 
     }
 }
 
@@ -108,6 +111,8 @@ function reset() {
     }
     document.getElementById('txt-result1').innerHTML = ''
     document.getElementById('txt-result2').innerHTML = ''
+    document.getElementById('txt-result1-d').innerHTML = ''
+    document.getElementById('txt-result2-d').innerHTML = ''
     console.clear()
 }
 
@@ -181,17 +186,64 @@ function checkCustom() {
 
 function inactiveReset() {
     var btn_reset = document.getElementById("btn-reset");
+    var btn_reset_d = document.getElementById("btn-reset-d")
+
     btn_reset.classList.add("inactive");
     btn_reset.classList.add("noHover");
+
+    btn_reset_d.classList.add("inactive");
+    btn_reset_d.classList.add("noHover");
 }
 
 function activeReset() {
     var btn_reset = document.getElementById("btn-reset");
+    var btn_reset_d = document.getElementById("btn-reset-d")
+
     btn_reset.classList.remove("inactive");
     btn_reset.classList.remove("noHover");
+
+    btn_reset_d.classList.remove("inactive");
+    btn_reset_d.classList.remove("noHover");
+}
+
+function checkSize() {
+    var x = window.matchMedia("(min-width: 1000px)")
+    var card2 = document.getElementById("card2")
+    var card3 = document.getElementById("card3")
+
+    console.clear();
+    // console.log(x.matches);
+    if(x.matches){
+        console.log("desktop")
+        if(!card2.classList.contains("hide")){
+            card2.classList.add("hide");
+        }
+        if(card3.classList.contains("hide")){
+            card3.classList.remove("hide");
+        }
+    }
+    else
+    {
+        console.log("mobile")
+        if(card2.classList.contains("hide"))
+        {
+            card2.classList.remove("hide");
+        }
+        if(!card3.classList.contains("hide")){
+            card3.classList.add("hide");
+        }
+    }
+    return x.matches
 }
 
 document.onclick = function () {
     console.log('clicked!')
     greenlight()
 }
+
+window.addEventListener('resize', function(event) {
+    checkSize();
+});
+
+checkSize();
+
