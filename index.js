@@ -1,5 +1,6 @@
 function calculateTip() {
     console.clear()
+    activeReset()
     var bill = parseInt(readBill())
     // if(bill == "")
     //     console.log("bill: empty");
@@ -92,6 +93,7 @@ function zeroPeople() {
 }
 
 function reset() {
+    inactiveReset()
     var bill = document.getElementById('bill')
     var people = document.getElementById('people')
     var custom = document.getElementById('input-custom')
@@ -175,6 +177,18 @@ function checkCustom() {
     }
     var input_radio = radios[5]
     input_radio.checked = true
+}
+
+function inactiveReset() {
+    var btn_reset = document.getElementById("btn-reset");
+    btn_reset.classList.add("inactive");
+    btn_reset.classList.add("noHover");
+}
+
+function activeReset() {
+    var btn_reset = document.getElementById("btn-reset");
+    btn_reset.classList.remove("inactive");
+    btn_reset.classList.remove("noHover");
 }
 
 document.onclick = function () {

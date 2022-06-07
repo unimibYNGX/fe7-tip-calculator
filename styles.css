@@ -213,6 +213,15 @@ body {
     transition: 0.25s ease;
 }
 
+.inactive {
+    background-color: rgb(0,108,110);
+    color: hsl(184, 83%, 12%);
+}
+
+.noHover {
+    pointer-events: none;
+}
+
 .btn-reset:hover {
     background-color: hsl(172, 67%, 77%);
     color: hsl(184, 83%, 12%);
