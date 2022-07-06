@@ -6,7 +6,7 @@
 
 * {
     font-family: 'Space Mono', sans-serif;
-    transition: 0.5s ease;
+    transition: 0.15s ease;
 }
 
 :root {
@@ -182,7 +182,7 @@ body {
     background-color: hsl(183, 100%, 15%);
     color: var(--light_grayish_cyan);
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: 0.15s ease;
     display: flex;
     justify-content: center;
 }
@@ -441,4 +441,8 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.header, .header2, .header3, .more, .less {
+    user-select: none;
 }

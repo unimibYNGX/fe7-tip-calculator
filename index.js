@@ -1,11 +1,7 @@
 function calculateTip() {
     console.clear()
     activeReset()
-    var bill = parseInt(readBill())
-    // if(bill == "")
-    //     console.log("bill: empty");
-    // else
-    //     console.log("bill: " + bill);
+    var bill = readBill()
 
     var tip = parseInt(document.querySelector('input[name="n"]:checked').value)
     var radios = document.getElementsByName('n')
@@ -18,7 +14,12 @@ function calculateTip() {
     var people = parseInt(readPeople())
 
     var result = (bill / people / 100) * tip
-    // console.log("result: " + result);
+    console.log(result)
+
+    console.log(bill)
+    var test = bill / 5; console.log("142.55 / 5 = " + test)
+    var test1 = test / 100 * 15; console.log(test1)
+
     var totalEach = bill / people + result
 
     var roundedResult = Math.round(100 * result) / 100
@@ -38,36 +39,15 @@ function calculateTip() {
 }
 
 function readBill() {
-    var bill = document.getElementById('bill')
-    var bill_content = bill.value
-    // if(bill_content != ""){
-    //     console.log("bill: " + bill_content);
-    // }
-    // else {
-    //     console.log("bill: empty");
-    // }
-    return bill_content
+    return document.getElementById('bill').value
 }
 
 function readPeople() {
-    var people = document.getElementById('people')
-    var people_content = people.value
-    // if(people_content != "")
-    //     console.log("people: " + people_content);
-    // else
-    //     console.log("people: empty");
-
-    return people.value
+    return document.getElementById('people').value
 }
 
 function readTip() {
-    var tip = document.querySelector('input[name="n"]:checked').value
-    // try {
-    //     console.log(tip);
-    // } catch (error) {
-    //     console.log("tip: empty");
-    // }
-    return tip
+    return document.querySelector('input[name="n"]:checked').value
 }
 
 function zeroPeople() {

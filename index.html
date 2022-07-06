@@ -17,13 +17,30 @@
     </head>
     <body>
         <div class="logo">
-            <img src="images/logo.svg" alt="" class="img-logo" />
+            <img
+                src="images/logo.svg"
+                alt=""
+                class="img-logo"
+                draggable="false"
+            />
         </div>
-        <div class="card">
+        <div
+            class="card"
+            data-tilt
+            data-tilt-reverse="false"
+            data-tilt-speed="100"
+            data-tilt-perspective="2000"
+            data-tilt-max="2"
+        >
             <div class="card-col1">
                 <div class="header bill">Bill</div>
                 <div class="display" id="display-bill">
-                    <img src="images/icon-dollar.svg" class="img-dollar" alt="" />
+                    <img
+                        src="images/icon-dollar.svg"
+                        class="img-dollar"
+                        alt=""
+                        draggable="false"
+                    />
                     <div class="col4">
                         <input
                             type="number"
@@ -133,7 +150,12 @@
                     </div>
                 </div>
                 <div class="display display-people" id="display-people">
-                    <img src="images/icon-person.svg" alt="" class="img-person" />
+                    <img
+                        src="images/icon-person.svg"
+                        alt=""
+                        class="img-person"
+                        draggable="false"
+                    />
                     <div class="col4">
                         <input
                             type="number"
@@ -164,7 +186,13 @@
                             <div class="txt-result2" id="txt-result2"></div>
                         </div>
                     </div>
-                    <div class="btn-reset inactive noHover" id="btn-reset" onclick="reset()">RESET</div>
+                    <div
+                        class="btn-reset inactive noHover"
+                        id="btn-reset"
+                        onclick="reset()"
+                    >
+                        RESET
+                    </div>
                 </div>
             </div>
             <div class="card-col2">
@@ -176,7 +204,10 @@
                                 <div class="less">/ person</div>
                             </div>
                             <div class="col2">
-                                <div class="txt-result1" id="txt-result1-d"></div>
+                                <div
+                                    class="txt-result1"
+                                    id="txt-result1-d"
+                                ></div>
                             </div>
                         </div>
                         <div class="row2 r2">
@@ -185,12 +216,21 @@
                                 <div class="less">/ person</div>
                             </div>
                             <div class="col2">
-                                <div class="txt-result2" id="txt-result2-d"></div>
+                                <div
+                                    class="txt-result2"
+                                    id="txt-result2-d"
+                                ></div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="btn-reset inactive noHover" id="btn-reset-d" onclick="reset()">RESET</div>
+
+                    <div
+                        class="btn-reset inactive noHover"
+                        id="btn-reset-d"
+                        onclick="reset()"
+                    >
+                        RESET
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,5 +244,6 @@
         </div>
         <!--scripts-->
         <script src="index.js"></script>
+        <script src="vanilla-tilt.min.js"></script>
     </body>
 </html>
